@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<title>LFM2.5-VL-450M — Executive brief</title>
+<style>
+  @page{size:Letter;margin:14mm 15mm}
+  :root{--ink:#13151a;--muted:#5b626c;--faint:#8a909a;--line:#e4e7ec;--accent:#0a73c4;--accentbg:#eaf4fc;--good:#0f9d6b;--bad:#d6493b;--warn:#b9791a;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Helvetica,Arial,sans-serif;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:var(--sans);color:var(--ink);font-size:11px;line-height:1.5;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .hdr{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:2px solid var(--ink);padding-bottom:9px}
+  .brand{display:flex;align-items:center;gap:8px}
+  .brand svg{width:20px;height:20px}
+  .brand .nm{font-size:16px;font-weight:700;letter-spacing:-.01em}
+  .brand .nm span{color:var(--muted);font-weight:500}
+  .hdr .tag{font-family:var(--mono);font-size:9.5px;letter-spacing:1px;text-transform:uppercase;color:var(--accent)}
+  h1{font-size:21px;line-height:1.12;letter-spacing:-.02em;margin:13px 0 4px;font-weight:720}
+  .sub{font-size:12px;color:var(--muted);margin:0 0 12px}
+  .who{background:var(--accentbg);border:1px solid #cfe6f7;border-radius:8px;padding:7px 11px;font-size:10.5px;color:#0a4e85;margin-bottom:13px}
+  .who b{color:#083b66}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:9px;margin-bottom:13px}
+  .vc{border:1px solid var(--line);border-radius:8px;padding:10px 11px}
+  .vc .n{font-family:var(--mono);font-size:9px;color:var(--accent);letter-spacing:.5px}
+  .vc h3{font-size:12.5px;margin:4px 0 5px;font-weight:680}
+  .vc p{margin:0;font-size:10px;color:var(--muted)}
+  .vc .big{font-family:var(--mono);font-size:13px;color:var(--ink);font-weight:700}
+  .two{display:grid;grid-template-columns:1.15fr 1fr;gap:16px;margin-bottom:12px}
+  .sec-t{font-family:var(--mono);font-size:9.5px;letter-spacing:1px;text-transform:uppercase;color:var(--faint);margin:0 0 8px}
+  .bars{display:flex;flex-direction:column;gap:5px}
+  .br{display:grid;grid-template-columns:92px 1fr;align-items:center;gap:8px}
+  .br .l{font-size:9.5px;text-align:right;color:var(--muted)}
+  .br .l b{display:block;color:var(--ink);font-size:9.5px}
+  .track{position:relative;height:19px;background:#f4f6f8;border-radius:4px;border:1px solid var(--line);overflow:hidden}
+  .fill{position:absolute;left:0;top:0;bottom:0;border-radius:3px}
+  .bv{position:absolute;top:50%;transform:translateY(-50%);font-family:var(--mono);font-size:9px;padding:0 6px;white-space:nowrap}
+  .note{font-size:9px;color:var(--faint);margin-top:7px;font-family:var(--mono)}
+  table{width:100%;border-collapse:collapse;font-size:9.5px}
+  th,td{text-align:left;padding:5px 7px;border-bottom:1px solid var(--line)}
+  th{font-size:8.5px;text-transform:uppercase;letter-spacing:.4px;color:var(--faint)}
+  td.me,tr.me td{background:#f1f8fd}
+  .tick{color:var(--good);font-weight:600}.cross{color:var(--bad)}.mid{color:var(--warn)}
+  .row1{font-weight:700}
+  .pilot{border:1px solid #cfe6f7;background:var(--accentbg);border-radius:8px;padding:9px 12px;margin-bottom:10px}
+  .pilot h3{margin:0 0 4px;font-size:12px;color:#0a4e85}
+  .pilot p{margin:0;font-size:10px;color:#0a4e85}
+  .pilot ol{margin:5px 0 0;padding-left:16px;color:#0a4e85;font-size:10px}
+  .caveat{border-left:3px solid var(--warn);background:#fdf8ef;border-radius:0 6px 6px 0;padding:7px 11px;font-size:9.5px;color:#6b521f;margin-bottom:10px}
+  .ft{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding-top:7px;font-size:8.5px;color:var(--faint)}
+  .ft a{color:var(--faint);text-decoration:none}
+</style></head>
+<body>
+
+<div class="hdr">
+  <div class="brand">
+    <svg viewBox="0 0 24 24"><path d="M12 2C12 2 5 10.5 5 15.5C5 19.6 8.1 22 12 22C15.9 22 19 19.6 19 15.5C19 10.5 12 2 12 2Z" fill="#0a73c4"/></svg>
+    <span class="nm">LFM2.5-VL-450M <span>· Liquid AI</span></span>
+  </div>
+  <div class="tag">Executive brief · for the visual-data buying committee</div>
+</div>
+
+<h1>The vision model that belongs in your data pipeline — not your product.</h1>
+<p class="sub">A 450M-parameter multimodal model, small and cheap enough to run over your <b>entire image corpus</b> on hardware you already own, over data that never leaves your network — and to re-run it, free, every time your needs change.</p>
+
+<div class="who"><b>Who this is for:</b> the team that owns visual data infrastructure at a Fortune-2000 — millions of claims photos, product shots, inspection frames, or media assets that need captioning, tagging, detection, and triage at scale, and a budget that re-processing keeps inflating.</div>
+
+<div class="grid3">
+  <div class="vc"><div class="n">01 · OWN THE LINE ITEM</div><h3>Re-processing becomes free</h3>
+    <p>A pipeline re-reads the whole corpus on every model or taxonomy change. Metered APIs charge for all of it, again. On-device marginal cost is <span class="big">≈ $0</span>.</p></div>
+  <div class="vc"><div class="n">02 · KEEP DATA HOME</div><h3>Nothing leaves the boundary</h3>
+    <p>Runs fully on-prem / at the edge. Point it at regulated or sensitive imagery a cloud API is forbidden to see. <span class="big">Zero egress.</span></p></div>
+  <div class="vc"><div class="n">03 · OWN A SPECIALIST</div><h3>Fine-tune to your taxonomy</h3>
+    <p>Small enough to fine-tune on <span class="big">one GPU</span>, then freeze. No vendor drift, no rate limits, no lock-in. The weights are yours.</p></div>
+</div>
+
+<div class="two">
+  <div>
+    <p class="sec-t">Cost to run + re-run a 30M-image archive · per year</p>
+    <div class="bars" id="bars"></div>
+    <div class="note">Representative: 30M corpus, 3M new/mo, re-processed 3×/yr = 126M inferences. API = input tokens only, 2026 list price. On-device = one edge box, hardware amortized. Marginal cost per re-run: $0.</div>
+  </div>
+  <div>
+    <p class="sec-t">The field, honestly</p>
+    <table>
+      <thead><tr><th>Option</th><th>Runs</th><th>$/1k img</th><th>Data home</th></tr></thead>
+      <tbody>
+        <tr class="me"><td class="row1">LFM2.5-VL-450M</td><td>edge·CPU·GPU</td><td class="tick">≈$0 mrg</td><td class="tick">Yes</td></tr>
+        <tr><td>Qwen2.5-VL-3B (self-host)</td><td>GPU, heavier</td><td class="tick">≈$0 mrg</td><td class="tick">Yes</td></tr>
+        <tr><td>Gemini Flash-Lite (API)</td><td>cloud only</td><td class="mid">$0.05</td><td class="cross">No</td></tr>
+        <tr><td>GPT-4o-mini (API)</td><td>cloud only</td><td class="cross">$3.83</td><td class="cross">No</td></tr>
+        <tr><td>Silicon-partner VLM</td><td>one NPU SKU</td><td class="tick">≈$0 mrg</td><td class="tick">Yes</td></tr>
+      </tbody>
+    </table>
+    <div class="note">Qwen2.5-VL-3B scores higher on general VQA but is ~6× the size; the APIs are most capable yet meter every image and require egress.</div>
+  </div>
+</div>
+
+<div class="caveat"><b>Where it is not the answer:</b> dense text extraction (OCRBench 684 vs Qwen-7B's 864). Route document transcription to a specialist or larger model — this model wins on detection, captioning, counting, and routing, the triage layer. <b>License:</b> LFM Open License v1.0, not Apache/MIT — legal review before fleet deployment.</div>
+
+<div class="pilot">
+  <h3>The ask: a two-week test built to fail fast if it's wrong</h3>
+  <p>Take 100k images from one corpus → fine-tune LFM2.5-VL-450M on your taxonomy (single GPU, hours) → run locally → measure triage precision/recall and cost-per-million vs your current API or human-labeling baseline. Miss the bar: you spent a GPU-week. Clear it: you removed a compounding re-processing cost and a data-governance blocker at once.</p>
+</div>
+
+<div class="ft">
+  <div>Independent technical brief · not an official Liquid AI asset · figures sourced to vendor model cards &amp; 2026 API price lists</div>
+  <div><a href="https://huggingface.co/LiquidAI/LFM2.5-VL-450M">huggingface.co/LiquidAI/LFM2.5-VL-450M</a></div>
+</div>
+
+<script>
+(function(){
+  // representative scenario: 126M inferences/yr
+  var inf=126e6;
+  var tiers=[["GPT-4o-mini",3.83,'api'],["Claude Haiku 4.5",1.30,'api'],["GPT-4.1-mini",0.50,'api'],["Gemini 2.5 Flash",0.15,'api'],["Gemini Flash-Lite",0.05,'api'],["LFM2.5-VL-450M",null,'od']];
+  var rows=tiers.map(function(t){return {n:t[0],c:(t[2]==='od'?660:inf/1000*t[1]),k:t[2]}});
+  rows.sort(function(a,b){return b.c-a.c});
+  var max=rows[0].c;
+  function f(x){return x>=1e6?'$'+(x/1e6).toFixed(2)+'M':x>=1e3?'$'+(x/1e3).toFixed(x<1e4?1:0)+'k':'$'+Math.round(x)}
+  var h='';
+  rows.forEach(function(r){
+    var w=Math.max(3,r.c/max*100);
+    var col=r.k==='od'?'linear-gradient(90deg,#0f9d6b,#34d399)':(r.c===max?'linear-gradient(90deg,#b3392d,#e7665a)':'linear-gradient(90deg,#aeb6c0,#cdd4dc)');
+    var inside=w>55;
+    h+='<div class="br"><div class="l"><b>'+r.n+'</b>'+(r.k==='od'?'1× edge box':'')+'</div>'+
+       '<div class="track"><div class="fill" style="width:'+w+'%;background:'+col+'"></div>'+
+       '<div class="bv" style="'+(inside?'right:4px;color:#fff':'left:'+w+'%;color:#13151a')+'">'+f(r.c)+'/yr</div></div></div>';
+  });
+  document.getElementById('bars').innerHTML=h;
+})();
+</script>
+</body></html>
